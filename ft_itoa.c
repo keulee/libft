@@ -25,7 +25,7 @@ char	*ft_itoa(int n)
 
 	mark = (n < 0 ? 1 : 0);
 	i = ft_int_len(n);
-	if(!(str = (char *)malloc(sizeof(char) * i + 1)))
+	if(!(str = (char *)malloc(sizeof(char) * (i + 1))))
 		return (NULL);
 	if(n == -2147483648)
 		return (ft_strdup("-2147483648"));
