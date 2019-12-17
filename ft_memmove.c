@@ -9,11 +9,9 @@ void	*ft_memmove(void *s1, const void *s2, size_t len)
 	dst = (unsigned char *)s1;
 	src = (unsigned char *)s2;
 	i = 0;
-	if (dst == NULL || src == NULL)
+	if (dst == NULL && src == NULL)
 		return (NULL);
-	if (dst < src || dst + len < src) // overlap
-
-	if (dst > src) // no overlap
+	if (dst < src)
 	{
 		while (i < len)
 		{
@@ -21,5 +19,13 @@ void	*ft_memmove(void *s1, const void *s2, size_t len)
 			i++;
 		}
 	}
-	return (s1);
+	else
+	{
+		while (0 < len)
+		{
+			dst[len] = src[len];
+			len--;
+		}
+	}
+	return (dst);
 }
