@@ -1,9 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: keulee <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/11/20 14:07:27 by keulee            #+#    #+#             */
+/*   Updated: 2019/12/18 11:52:23 by keulee           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+//
+//
+// The atoi() function converts the initial portion of the string pointed to by str to int representation.
+// It is equivalent to:(int)strtol(str, (char **)NULL, 10);
+// Diffrent from ft_atoi during la piscine.(you need to control the overflow and underflow of int.)
+//
 #include <stdlib.h>
 
 int		ft_atoi(const char *str)
 {
-	int						mark;
-	int 					i;
+	int				mark;
+	int 				i;
 	unsigned long int		final_nbr;
 
 	i = 0;
