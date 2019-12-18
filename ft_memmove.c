@@ -1,3 +1,4 @@
+#include "libft.h"
 #include <stdlib.h>
 
 void	*ft_memmove(void *s1, const void *s2, size_t len)
@@ -21,11 +22,8 @@ void	*ft_memmove(void *s1, const void *s2, size_t len)
 	}
 	else
 	{
-		while (0 < len)
-		{
+		while (0 < len--)
 			dst[len] = src[len];
-			len--;
-		}
 	}
 	return (dst);
 }
