@@ -22,6 +22,7 @@
 // If the src and dst strings overlap, the behavior is undefined.
 //
 // Return
+// The strlcpy() and strlcat() functions return the total length of the string they tried to create.
 // For strlcat() that means the initial length of dst plus the length of src. 
 // If the return value is >= dstsize, the output string has been truncated.
 // It is the caller's responsibility to handle this.
