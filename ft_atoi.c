@@ -37,7 +37,7 @@ int		ft_atoi(const char *str)
 	{
 		final_nbr = final_nbr * 10 + str[i] - '0';
 		i++;
-		if (final_nbr > 2147483648 && mark == 1)
+		if (final_nbr > 2147483647 && mark == 1)
 			return (-1);
 		if (final_nbr > 2147483648 && mark == -1)
 			return (0);
