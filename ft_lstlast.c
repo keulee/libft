@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keulee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/16 13:34:29 by keulee            #+#    #+#             */
-/*   Updated: 2019/12/11 21:36:28 by keulee           ###   ########.fr       */
+/*   Created: 2019/11/26 21:49:21 by keulee            #+#    #+#             */
+/*   Updated: 2019/12/26 17:44:31 by keulee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+//
+// Description
+// Returns the last element of the list.
+// 
+// Parameters
+// #1. The beginning of the list.
+//
+// Return
+// Last element of the list.
+//
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+t_list		*ft_lstlast(t_list *lst)
 {
-	int i;
+	int count;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
+	count = ft_lstsize(lst);
+	while (count - 1 > 0)
+	{
+		lst = lst->next;
+		count--;
+	}
+	return (lst);
 }

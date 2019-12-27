@@ -1,23 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: keulee <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/16 13:34:29 by keulee            #+#    #+#             */
-/*   Updated: 2019/12/11 21:36:28 by keulee           ###   ########.fr       */
+/*   Created: 2019/11/20 13:56:00 by keulee            #+#    #+#             */
+/*   Updated: 2019/12/11 09:48:19 by keulee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
+//
+// The memset() function writes len bytes of value c (converted to an unsigned char) to the string b.
+//
+// Return
+// The memset() function returns its first argument.
+//
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void	*ft_memset(void *b, int a, size_t len)
 {
-	int i;
+	unsigned int		i;
+	unsigned char		c;
+	char				*ptr2;
 
+	ptr2 = (char *)b;
 	i = 0;
-	while (str[i] != '\0')
+	c = a;
+	while (i != len)
+	{
+		ptr2[i] = a;
 		i++;
-	return (i);
+	}
+	return (ptr2);
 }

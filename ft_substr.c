@@ -1,3 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: keulee <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/12/12 17:27:52 by keulee            #+#    #+#             */
+/*   Updated: 2019/12/19 09:52:10 by keulee           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+//
+// Description
+// Allocates (with malloc(3)) and returns a substring from the string ’s’.
+// The substring begins at index ’start’ and is of maximum size ’len’.
+//
+// Parameters
+// #1. The string from which to create the substring.
+// #2. The start index of the substring in the string ’s’.
+// #3. The maximum length of the substring.
+//
+// Return
+// The substring. NULL if the allocation fails.
+//
+// External functs.
+// malloc
+//
+#include "libft.h"
 #include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
@@ -11,22 +39,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	copy = NULL;
 	if (!(copy = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	while (s[i] != '\0')
+	while (s[i] != '\0' && 0 < len)
 	{
-		while (0 < len)
-		{
-			copy[j++] = s[start++];
-			len--;
-		}
+		copy[j++] = s[start++];
+		len--;
 		i++;
 	}
 	copy[j] = '\0';
 	return (copy);
 }
-
-// 문제를 제대로 이해 못해서 코드를 잘못 짬... 
-// unsigned int start에서 start는 unsigned char나 char로 cast할 아스키가 아니라 스트링 s에서 index를 이야기 하는 것임.
-// <각 파라미터 설명>
-// #1. The string from which to create the substring.
-// #2. The start index of the substring in the string ’s’.
-// #3. The maximum length of the substring.
