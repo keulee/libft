@@ -60,11 +60,13 @@ char			*ft_strtrim(char const *s1, char const *set)
 		j--;
 	return (ft_substr(s1, i, j - i + 1));
 }
-
-int		main(void)
-{
-	char *s1 = "\t \n\n \t\t \n\n\nHello \t  Please\n Trim me !\n  \n \n \t\t\n";
-
-	printf("%s\n", ft_strtrim(s1, " \n\t"));
-	return (0);
-}
+//
+// Test
+//
+//int		main(void)
+//{
+//	char *s1 = "\t \n\n \t\t \n\n\nHello \t  Please\n Trim me !\n  \n \n \t\t\n";
+//
+//	printf("%s\n", ft_strtrim(s1, " \n\t"));
+//	return (0);
+//}
