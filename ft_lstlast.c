@@ -23,13 +23,9 @@
 
 t_list		*ft_lstlast(t_list *lst)
 {
-	int count;
-
-	count = ft_lstsize(lst);
-	while (count - 1 > 0)
-	{
+    if (lst == NULL)
+        return (NULL);
+	while (lst->next != NULL)
 		lst = lst->next;
-		count--;
-	}
 	return (lst);
 }
