@@ -1,3 +1,4 @@
+#include "libft.h"
 #include <stdlib.h>
 
 int		ft_int_len(int n)
