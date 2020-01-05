@@ -78,7 +78,7 @@ bonus:
 	ranlib $(NAME)
 
 clean:
-	rm -f $(OBJ) (OBJBONUS)
+	rm -f $(OBJ) $(OBJBONUS)
 
 fclean: clean
 	rm -f $(NAME)
