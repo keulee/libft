@@ -36,9 +36,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = 0;
-    if (ft_strlen(s) > start)
-        return (ft_strdup(""));
-	copy = NULL;
+	if (s == NULL)
+		return (NULL);
+	if ((unsigned int)ft_strlen(s) < start)
+		return (ft_strdup(""));
 	if (!(copy = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	while (s[i] != '\0' && 0 < len)
