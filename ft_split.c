@@ -86,9 +86,9 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	if (!(new = (char **)malloc(sizeof(char *) * (ft_tab_count(s, c) + 1))))
-		return (NULL);
 	if (s == NULL)
+		return (NULL);
+	if (!(new = (char **)malloc(sizeof(char *) * (ft_tab_count(s, c) + 1))))
 		return (NULL);
 	while (s[i] != '\0' && j < ft_tab_count(s, c))
 	{
