@@ -68,7 +68,6 @@ typedef struct    s_list
     void          *content;
     struct s_list *next;
 }                 t_list;
-
 • content : The data contained in the element. The void * allows to store any kind of data.
 • next : The next element’s address or NULL if it’s the last element.
 </code></pre>
