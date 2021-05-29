@@ -11,14 +11,15 @@
 /* ************************************************************************** */
 //
 // Description
-// The strdup() function allocates sufficient memory for a copy of the string s1, does the copy, and returns a pointer to it.
+// The strdup() function allocates sufficient memory
+// for a copy of the string s1, does the copy, and returns a pointer to it.
 // The pointer may subsequently be used as an argument to the function free(3).
-// If insufficient memory is available, NULL is returned and errno is set to ENOMEM.
+// If insufficient memory is available,
+// NULL is returned and errno is set to ENOMEM.
 //
 #include "libft.h"
-#include <stdlib.h>
 
-char		*ft_strdup(const char *src)
+char	*ft_strdup(const char *src)
 {
 	char	*copy;
 	int		i;
@@ -27,7 +28,8 @@ char		*ft_strdup(const char *src)
 	i = 0;
 	copy = NULL;
 	len = ft_strlen(src);
-	if (!(copy = (char *)malloc(sizeof(char) * (len + 1))))
+	copy = (char *)ft_calloc(len + 1, sizeof(char));
+	if (!copy)
 		return (NULL);
 	while (i < len)
 	{

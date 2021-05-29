@@ -21,12 +21,11 @@
 // None
 //
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_print_nbr_fd(int nbr, int fd)
 {
-	int num;
-	int nbr2;
+	int	num;
+	int	nbr2;
 
 	num = 1;
 	nbr2 = nbr;

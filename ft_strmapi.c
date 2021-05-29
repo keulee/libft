@@ -12,14 +12,16 @@
 //
 // Description
 // Applies the function ’f’ to each character of the string ’s’
-// to create a new string (with malloc(3))resulting from successive applications of ’f’.
+// to create a new string (with malloc(3))resulting
+// from successive applications of ’f’.
 //
 // Parameters
 // #1. The string on which to iterate.
 // #2. The function to apply to each character.
 //
 // Return
-// The string created from the successive applications of ’f’. Returns NULL if the allocation fails.
+// The string created from the successive applications of ’f’.
+// Returns NULL if the allocation fails.
 //
 // Externel functs.
 // Malloc
@@ -35,7 +37,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	i = 0;
 	if (s == NULL || (*f) == NULL)
 		return (NULL);
-	if (!(newstr = (char *)malloc(sizeof(char) * ft_strlen(s) + 1)))
+	newstr = (char *)malloc(sizeof(char) * ft_strlen(s) + 1);
+	if (!(newstr))
 		return (NULL);
 	while (s[i] != '\0')
 	{

@@ -11,7 +11,8 @@
 /* ************************************************************************** */
 //
 // Description
-// Allocates (with malloc(3)) and returns a copy of ’s1’ with the characters specified in ’set’ 
+// Allocates (with malloc(3)) and returns a copy of ’s1’
+// with the characters specified in ’set’ 
 // removed from the beginning and the end of the string.
 //
 // Parameters
@@ -43,7 +44,7 @@ unsigned int	ft_check_set(char const *s1, char c)
 	return (0);
 }
 
-char			*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	unsigned int		i;
 	unsigned int		j;

@@ -9,19 +9,20 @@
 /*   Updated: 2019/12/18 14:24:26 by keulee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-//
-//The calloc() function contiguously allocates enough space for count objects that are size bytes of 
-//memory each and returns a pointer to the allocated memory. 
-//The allocated memory is filled with bytes of value zero (0).
-//
+/*
+** The calloc() function contiguously allocates enough space for count objects
+** that are size bytes of 
+** memory each and returns a pointer to the allocated memory. 
+** The allocated memory is filled with bytes of value zero (0).
+*/
 #include "libft.h"
-#include <stdlib.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*copy;
 
-	if (!(copy = (void *)malloc(size * count)))
+	copy = (void *)malloc(size * count);
+	if (!(copy))
 		return (NULL);
 	ft_bzero(copy, size * count);
 	return (copy);

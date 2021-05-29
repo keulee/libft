@@ -9,24 +9,23 @@
 /*   Updated: 2019/12/19 09:52:10 by keulee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-//
-// Description
-// Allocates (with malloc(3)) and returns a substring from the string ’s’.
-// The substring begins at index ’start’ and is of maximum size ’len’.
-//
-// Parameters
-// #1. The string from which to create the substring.
-// #2. The start index of the substring in the string ’s’.
-// #3. The maximum length of the substring.
-//
-// Return
-// The substring. NULL if the allocation fails.
-//
-// External functs.
-// malloc
-//
+/*
+** Description
+** Allocates (with malloc(3)) and returns a substring from the string ’s’.
+** The substring begins at index ’start’ and is of maximum size ’len’.
+**
+** Parameters
+** #1. The string from which to create the substring.
+** #2. The start index of the substring in the string ’s’.
+** #3. The maximum length of the substring.
+**
+** Return
+** The substring. NULL if the allocation fails.
+**
+** External functs.
+** malloc
+*/
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -36,10 +35,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	j = 0;
-    if (ft_strlen(s) > start)
-        return (ft_strdup(""));
+	if (ft_strlen(s) > start)
+		return (ft_strdup(""));
 	copy = NULL;
-	if (!(copy = (char *)malloc(sizeof(char) * (len + 1))))
+	copy = (char *)ft_calloc(len + 1, sizeof(char));
+	if (!(copy))
 		return (NULL);
 	while (s[i] != '\0' && 0 < len)
 	{

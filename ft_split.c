@@ -11,8 +11,10 @@
 /* ************************************************************************** */
 //
 // Description
-// Allocates (with malloc(3)) and returns an array of strings obtained by splitting ’s’
-// using the character ’c’ as a delimiter. The array must be ended by a NULL pointer.
+// Allocates (with malloc(3)) and returns an array of strings
+// obtained by splitting ’s’
+// using the character ’c’ as a delimiter.
+// The array must be ended by a NULL pointer.
 //
 // Parameters
 // #1. The string to be split.
@@ -26,13 +28,12 @@
 // malloc, free
 //
 #include "libft.h"
-#include <stdlib.h>
 
-int		ft_tab_count(char const *s, char c)
+int	ft_tab_count(char const *s, char c)
 {
-	int		i;
-	int		count;
-	int		tmp;
+	int	i;
+	int	count;
+	int	tmp;
 
 	i = 0;
 	count = 0;
@@ -53,9 +54,9 @@ int		ft_tab_count(char const *s, char c)
 	return (count);
 }
 
-int		ft_tab_len(char const *s, char c, int i)
+int	ft_tab_len(char const *s, char c, int i)
 {
-	int		len;
+	int	len;
 
 	len = 0;
 	while (s[i] != '\0' && s[i] != c)
